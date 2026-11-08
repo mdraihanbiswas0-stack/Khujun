@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Hind Siliguri', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Custom scrollbar for horizontal tool strips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Firefly glow keyframes */
+@keyframes fireflyPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(163, 230, 53, 0.7)) drop-shadow(0 0 16px rgba(132, 204, 22, 0.5));
+    opacity: 0.85;
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgba(190, 242, 100, 1)) drop-shadow(0 0 35px rgba(132, 204, 22, 0.9));
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes wingFlutterLeft {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-28deg) translateY(-2px);
+  }
+}
+
+@keyframes wingFlutterRight {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(28deg) translateY(-2px);
+  }
+}
+
+.firefly-glow {
+  animation: fireflyPulse 2.8s ease-in-out infinite;
+}
+
+.firefly-wing-left {
+  transform-origin: 85% 75%;
+  animation: wingFlutterLeft 0.16s ease-in-out infinite alternate;
+}
+
+.firefly-wing-right {
+  transform-origin: 15% 75%;
+  animation: wingFlutterRight 0.16s ease-in-out infinite alternate;
+}
+
+.firefly-wings-calm .firefly-wing-left {
+  animation: wingFlutterLeft 1.2s ease-in-out infinite alternate;
+}
+
+.firefly-wings-calm .firefly-wing-right {
+  animation: wingFlutterRight 1.2s ease-in-out infinite alternate;
+}
+

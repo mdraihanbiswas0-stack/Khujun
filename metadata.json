@@ -1,0 +1,10 @@
+{
+  "name": "OmniFinder: Universal Mobile Search & Firefly Widget",
+  "description": "একটি শক্তিশালী অল-ইন-ওয়ান মোবাইল ও অনলাইন সার্চ ইঞ্জিন এবং কাস্টমাইজযোগ্য অ্যান্ড্রয়েড স্টাইল উইজেট সাথে উজ্জ্বল জোনাকি পোকার অ্যানিমেশন।",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
